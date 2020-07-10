@@ -33,5 +33,3 @@ const darkMode = () => {
         })
     })
 }
-
-console.log(card);
