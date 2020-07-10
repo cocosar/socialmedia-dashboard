@@ -1,0 +1,313 @@
+// Reseting rules
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  font-family: Inter;
+}
+
+// Main
+.main-container {
+  margin: 0px 10vw 30px 10vw;
+  padding-top: 30px;
+}
+
+// Divisor
+.divisor {
+  width: 100%;
+  height: 20vh;
+  position: absolute;
+  background-color: hsl(225, 100%, 98%);
+  border-radius: 0 0 15px 15px;
+  z-index: -1;
+}
+
+// Titles
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  h1 {
+    font-size: 23px;
+    font-weight: 700;
+    color: hsl(230, 17%, 14%);
+  }
+  p {
+    font-size: 14px;
+    color: hsl(228, 12%, 44%);
+    font-weight: 700;
+  }
+  .dark-mode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hsl(228, 12%, 44%);
+    font-weight: 700;
+    button {
+      width: 90px;
+      height: 20px;
+      margin-left: 10px;
+    }
+  }
+}
+
+.overview-title {
+  display: inline-block;
+  margin: 20px 0px 15px 0px;
+  font-weight: 700;
+  font-size: 20px;
+  color: hsl(228, 12%, 44%);
+}
+
+// Cards containers
+.main-cards,
+.overview-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.overview-cards .col {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+// Cards Light Theme
+.card {
+  background-color: hsl(227, 47%, 96%);
+  width: 18vw;
+  border-radius: 7px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 30px;
+  margin-bottom: 20px;
+  &:hover {
+    background-color: darken($color: hsl(227, 47%, 96%), $amount: 3%);
+    cursor: pointer;
+  }
+
+  .account-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 12px;
+    color: hsl(228, 12%, 44%);
+    img {
+      margin-right: 5px;
+    }
+  }
+  .main-number {
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 4vw;
+    color: hsl(230, 17%, 14%);
+  }
+  .follower-text {
+    width: 100%;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: hsl(228, 12%, 44%);
+    margin-bottom: 15px;
+  }
+  .today-comparison {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0px 0px 0px;
+    font-size: 12px;
+    font-weight: 700;
+    color: hsl(163, 72%, 41%);
+    img {
+      margin-right: 3px;
+      width: 8px;
+      height: 4px;
+    }
+  }
+  .down {
+    color: hsl(356, 69%, 56%);
+  }
+
+  // Cards (Overview)
+  .account-subtitle {
+    width: 100%;
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    color: hsl(228, 12%, 44%);
+    img {
+      object-fit: contain;
+    }
+  }
+  .number-comparison {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    .sub-number {
+      font-size: 2.5vw;
+      font-weight: 700;
+      align-self: flex-end;
+    }
+  }
+}
+
+// Cards Borders
+.facebook {
+  border-top: 3px solid hsl(208, 92%, 53%);
+}
+.twitter {
+  border-top: 3px solid hsl(203, 89%, 53%);
+}
+
+.youtube {
+  border-top: 3px solid hsl(348, 97%, 39%);
+}
+// Gradient border
+.instagram{
+    position: relative;
+    border-top: 3px hidden;
+    &:before{
+        content: "";
+        width: 99%;
+        height: 99%;
+        border-radius: 7px;
+        box-sizing: content-box;
+        position: absolute;
+        background: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+        top: -3px;
+        z-index: -1;
+    }
+}
+// Media Query
+@media only screen and (max-width: 1000px) {
+  .account-subtitle {
+    font-size: 1.2vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    .titles {
+      border-bottom: 1px solid gray;
+      padding-bottom: 15px;
+      width: 100%;
+    }
+    .dark-mode {
+      padding-top: 15px;
+    }
+  }
+  .main-cards,
+  .overview-cards {
+    flex-direction: column;
+  }
+  .col,
+  .wrapper,
+  .card {
+    width: 100%;
+    .main-number {
+      font-size: 20vw;
+    }
+    .account-subtitle {
+      font-size: 15px;
+    }
+    .number-comparison .sub-number {
+      font-size: 10vw;
+    }
+  }
+}
+
+// Dark Mode
+body.dark {
+  background-color: hsl(230, 17%, 14%);
+}
+.divisor.dark {
+  background-color: hsl(232, 19%, 15%);
+}
+.card.dark {
+  background-color: hsl(228, 28%, 20%);
+}
+.titles.dark h1,
+.main-number.dark,
+.sub-number.dark {
+  color: white;
+}
+.titles.dark p,
+.account-name.dark,
+.follower-text.dark,
+.overview-title.dark,
+.account-subtitle.dark {
+  color: hsl(228, 34%, 66%);
+}
+
+// Dark mode toggler
+.switch {
+  margin-left: 10px;
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(230, 22%, 74%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  &:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 4px;
+    bottom: 3px;
+    background-color: hsl(225, 100%, 98%);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+}
+
+input:checked + .slider {
+  background-image: linear-gradient(
+    right,
+    hsl(210, 78%, 56%) 0%,
+    hsl(146, 68%, 55%) 100%
+  );
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px transparent;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(17px);
+  -ms-transform: translateX(17px);
+  transform: translateX(17px);
+  background-color: hsl(232, 19%, 15%);
+}
+
+.slider.round {
+  border-radius: 34px;
+  &:before {
+    border-radius: 50%;
+  }
+}

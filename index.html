@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Title -->
+    <title>Social media Dashboard</title>
+
+  </head>
+  <body>
+    <!-- Background divisor -->
+    <div id="divisor" class="divisor"></div>
+    <!-- Main Container -->
+    <div class="main-container">
+      <!-- Headers -->
+      <div class="header">
+        <div class="titles">
+          <h1>Social Media Dashboard</h1>
+          <p>Total Followers: 23,004</p>
+        </div>
+
+        <div class="dark-mode">
+          Dark Mode
+          <label class="switch">
+            <input type="checkbox" onclick="darkMode()"/>
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+      <!-- Main Cards -->
+      <div class="main-cards">
+        <div class="card facebook">
+          <div class="account-name">
+            <img src="/images/icon-facebook.svg" alt="fb-logo" />@nathanf
+          </div>
+          <div class="main-number">1987</div>
+          <div class="follower-text">Followers</div>
+          <div class="today-comparison">
+            <img src="/images/icon-up.svg" alt="up" />12 Today
+          </div>
+        </div>
+
+        <div class="card twitter">
+          <div class="account-name">
+            <img src="/images/icon-twitter.svg" alt="twitter-logo" />@nathanf
+          </div>
+          <div class="main-number">1044</div>
+          <div class="follower-text">Followers</div>
+          <div class="today-comparison">
+            <img src="/images/icon-up.svg" alt="up" />99 Today
+          </div>
+        </div>
+
+        <!-- WRAPPER FOR A GRADIENT BORDER -->
+        <div class="wrapper">
+          <div class="card instagram">
+            <div class="account-name">
+              <img src="/images/icon-instagram.svg" alt="ig-logo" />@realnathanf
+            </div>
+            <div class="main-number">11k</div>
+            <div class="follower-text">Followers</div>
+            <div class="today-comparison">
+              <img src="/images/icon-up.svg" alt="up" />1099 Today
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="card youtube">
+          <div class="account-name">
+            <img src="/images/icon-youtube.svg" alt="yt-logo" />Nathan F.
+          </div>
+          <div class="main-number">8239</div>
+          <div class="follower-text">Suscribers</div>
+          <div class="today-comparison down">
+            <img src="/images/icon-down.svg" alt="up" />144 Today
+          </div>
+        </div>
+      </div>
+      <!-- Overview title & Cards -->
+      <h2 class="overview-title">
+        Overview - Today
+      </h2>
+
+      <div class="overview-cards">
+        <div class="col">
+          <div class="card">
+            <div class="account-subtitle">
+              <h3>Page Views</h3>
+              <img src="/images/icon-facebook.svg" alt="fb-logo" class="logo" />
+            </div>
+            <div class="number-comparison">
+              <div class="sub-number">87</div>
+              <div class="today-comparison">
+                <img src="/images/icon-up.svg" alt="up" class="up" />3%
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="account-subtitle">
+              <h3>Likes</h3>
+              <img src="/images/icon-facebook.svg" alt="fb-logo" class="logo" />
+            </div>
+            <div class="number-comparison">
+              <div class="sub-number">52</div>
+              <div class="today-comparison down">
+                <img src="/images/icon-down.svg" alt="down" />2%
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <div class="account-subtitle">
+              <h3>Retweets</h3>
+              <img
+                src="/images/icon-twitter.svg"
+                alt="twitter-logo"
+                class="logo"
+              />
+            </div>
+            <div class="number-comparison">
+              <div class="sub-number">117</div>
+              <div class="today-comparison">
+                <img src="/images/icon-up.svg" alt="up" class="up" />303%
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="account-subtitle">
+              <h3>Likes</h3>
+              <img
+                src="/images/icon-twitter.svg"
+                alt="twitter-logo"
+                class="logo"
+              />
+            </div>
+            <div class="number-comparison">
+              <div class="sub-number">507</div>
+              <div class="today-comparison">
+                <img src="/images/icon-up.svg" alt="up" class="up" />553%
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <div class="account-subtitle">
+              <h3>Likes</h3>
+              <img
+                src="/images/icon-instagram.svg"
+                alt="ig-logo"
+                class="logo"
+              />
+            </div>
+            <div class="number-comparison">
+              <div class="sub-number">5462</div>
+              <div class="today-comparison">
+                <img src="/images/icon-up.svg" alt="up" class="up" />2257%
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="account-subtitle">
+              <h3>Profile Views</h3>
+              <img
+                src="/images/icon-instagram.svg"
+                alt="ig-logo"
+                class="logo"
+              />
+            </div>
+            <div class="number-comparison">
+              <div class="sub-number">52k</div>
+              <div class="today-comparison">
+                <img src="/images/icon-up.svg" alt="up" class="up" />1375%
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <div class="account-subtitle">
+              <h3>Likes</h3>
+              <img src="/images/icon-youtube.svg" alt="yt-logo" class="logo" />
+            </div>
+            <div class="number-comparison">
+              <div class="sub-number">107</div>
+              <div class="today-comparison down">
+                <img src="/images/icon-down.svg" alt="down" />19%
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="account-subtitle">
+              <h3>Total Views</h3>
+              <img src="/images/icon-youtube.svg" alt="yt-logo" class="logo" />
+            </div>
+            <div class="number-comparison">
+              <div class="sub-number">1407</div>
+              <div class="today-comparison down">
+                <img src="/images/icon-down.svg" alt="down" />12%
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Attribution -->
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://landingpage-kohl.vercel.app/" target="_blank">Juan José Sarsotti</a>.
+      </div>
+    </div>
+  
+    <!-- JS for dark mode -->
+    <script type="text/javascript" src="./dark-button.js"></script>
+  </body>
+</html>
