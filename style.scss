@@ -235,6 +235,9 @@ body.dark {
 }
 .card.dark {
   background-color: hsl(228, 28%, 20%);
+  &:hover{
+    background-color: hsl(228, 28%, 25%)
+  }
 }
 .titles.dark h1,
 .main-number.dark,

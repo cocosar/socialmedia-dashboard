@@ -318,6 +318,10 @@ body.dark {
   background-color: #252a41;
 }
 
+.card.dark:hover {
+  background-color: #2e3552;
+}
+
 .titles.dark h1,
 .main-number.dark,
 .sub-number.dark {
